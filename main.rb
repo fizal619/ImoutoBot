@@ -21,6 +21,27 @@ scheduler.cron "7 5,13,21 * * *" do
   send_covid_updates @bot
 end
 
+scheduler.every "2h" do
+  # IMOUTOBOT WILL well have a 50% chance of RANDOMLY SENDING A MESSAGE to #op_af every hour
+  should_i_message = [true, false].sample
+  random_messages = [
+    "Oniichan daisuki 😘",
+    "i serve the soviet yunyun ",
+    "owo 😸", 
+    "I want hentai with senpai 😉🤤",
+    "BAKA!!😤😡",
+    "Look at these losers🤭",
+    "Sadique bakaaaa 😝",
+    "bt crease 🍑",
+    ""
+  ]
+
+  if should_i_message
+    # https://ruby-doc.org/core-1.9.3/Array.html#method-i-sample
+    @bot.send_message channel=128661000239972353, content=random_messages.sample
+  end
+end
+
 Thread.abort_on_exception = true
 Thread.new {
   # DONT CHANGE ABOVE THIS LINE ====================================================
@@ -74,6 +95,11 @@ Return all creation to cinders,
 and come frome the abyss!
 Explosion! \nhttps://thumbs.gfycat.com/AmazingFabulousBackswimmer-size_restricted.gif " 
   end
+
+  @bot.message(with_text: "imouto bakuretsu") do |event|
+    event.respond "bakuretsu bakuretsu la la la ( •̀ ω •́ )✧"
+  end
+
   
   # DONT CHANGE BELOW THIS LINE ==================================================
   @bot.run
