@@ -4,6 +4,8 @@ require 'rufus-scheduler'
 
 require "./covid.rb"
 
+# 👨‍🎓 FEEL DUNCE? Try: https://www.codecademy.com/learn/learn-ruby 💎
+
 # SINATRA STUFF
 set :bind, "0.0.0.0"
 set :protection, :except => :frame_options
@@ -21,8 +23,8 @@ scheduler.cron "7 5,13,21 * * *" do
   send_covid_updates @bot
 end
 
-scheduler.every "2h" do
-  # IMOUTOBOT WILL well have a 50% chance of RANDOMLY SENDING A MESSAGE to #op_af every hour
+# IMOUTOBOT WILL well have a 50% chance of RANDOMLY SENDING A MESSAGE to #op_af every half hour
+scheduler.cron "55 * * * *" do
   should_i_message = [true, false].sample
   random_messages = [
     "Oniichan daisuki 😘",
@@ -33,7 +35,15 @@ scheduler.every "2h" do
     "Look at these losers🤭",
     "Sadique bakaaaa 😝",
     "bt crease 🍑",
-    ""
+    "**Meshaan** oniichaan~😛",
+    "Saeed stimky rat🐀",
+    "Maitri daisuki oneechan🥰",
+    "Fizal pls bathe🤢🤮",
+    "ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA 
+    https://i.imgur.com/1wb4XCj.gif",
+    "Play with me!!
+    https://thumbs.gfycat.com/DirtyDetailedErmine.webp"
+
   ]
 
   if should_i_message
