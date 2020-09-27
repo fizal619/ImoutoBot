@@ -28,21 +28,20 @@ scheduler.cron "55 * * * *" do
   should_i_message = [true, false].sample
   random_messages = [
     "Oniichan daisuki 😘",
-    "i serve the soviet yunyun ",
-    "owo 😸", 
+    "i serve the soviet yunyun",
     "I want hentai with senpai 😉🤤",
-    "BAKA!!😤😡",
-    "Look at these losers🤭",
-    "Sadique bakaaaa 😝",
-    "bt crease 🍑",
+    "I want to play GTA too😔",
+    "Death is an Edgelord👹",
+    "i think there's something in my butt🍑😳...",
     "**Meshaan** oniichaan~😛",
-    "Saeed stimky rat🐀",
-    "Maitri daisuki oneechan🥰",
-    "Fizal pls bathe🤢🤮",
-    "ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA 
-    https://i.imgur.com/1wb4XCj.gif",
-    "Play with me!!
-    https://thumbs.gfycat.com/DirtyDetailedErmine.webp"
+    "Shit, meh tea!☕",
+    "MUDA MUDA MUDA MUDA MUDA MUDA MUDA MUDA 
+    https://i.imgur.com/cgSAB22.gif",
+    "DAME DA YO BAKA ONIICHAN! 😡",
+    "I h8 tomatoes... jk",
+    "I want pholourie",
+    "Help im stuck 😵😖
+    https://thumbs.gfycat.com/BigLongFlea-size_restricted.gif"
 
   ]
 
@@ -69,6 +68,10 @@ Thread.new {
     # this is a function from covid.rb
     result = covid_subscribe event.channel.id
     event.respond "Channel subscription status: #{result}"
+  end
+
+  @bot.message(contains: "shit") do |event|
+    event.message.create_reaction "💩"
   end
 
   @bot.message(with_text: "imouto roast me") do |event|
