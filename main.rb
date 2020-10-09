@@ -35,7 +35,7 @@ scheduler.cron "55 * * * *" do
     "i think there's something in my butt🍑😳...",
     "**Meshaan** oniichaan~😛",
     "Shit, meh tea!☕",
-    "MUDA MUDA MUDA MUDA MUDA MUDA MUDA MUDA 
+    "MUDA MUDA MUDA MUDA MUDA MUDA MUDA MUDA
     https://i.imgur.com/cgSAB22.gif",
     "DAME DA YO BAKA ONIICHAN! 😡",
     "I h8 tomatoes... jk",
@@ -94,8 +94,8 @@ Thread.new {
   @bot.message(with_text: "imouto") do |event|
     event.respond "hai hai imouto desu 👁👄👁"
   end
-  
-    
+
+
 @bot.message(with_text: "imouto explosion") do |event|
     event.respond "Darkness blacker than black and darker than dark,
 I beseech thee, combine with my deep crimson.
@@ -106,14 +106,14 @@ I desire for my torrent of power a destructive force:
 a destructive force without equal!
 Return all creation to cinders,
 and come frome the abyss!
-Explosion! \nhttps://thumbs.gfycat.com/AmazingFabulousBackswimmer-size_restricted.gif " 
+Explosion! \nhttps://thumbs.gfycat.com/AmazingFabulousBackswimmer-size_restricted.gif "
   end
 
   @bot.message(with_text: "imouto bakuretsu") do |event|
     event.respond "bakuretsu bakuretsu la la la ( •̀ ω •́ )✧"
   end
 
-  
+
   # DONT CHANGE BELOW THIS LINE ==================================================
   @bot.run
 }
