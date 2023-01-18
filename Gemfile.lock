@@ -38,7 +38,7 @@ GEM
     opus-ruby (1.0.1)
       ffi
     raabro (1.1.6)
-    rack (2.2.2)
+    rack (2.2.6.2)
     rack-protection (2.0.8.1)
       rack
     rbnacl (3.4.0)
